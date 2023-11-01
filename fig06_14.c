@@ -35,3 +35,13 @@ int main(void) {
 // compare key to every element of array until the location is found
 // or until the end of array is reached; return subscript of element
 // if key is found or -1 if key is not found
+int linearSearch(const int array[], int key, size_t size) {
+    // loop through array
+    for (size_t n = 0; n < size; ++n) {
+        if (array[n] == key) {
+            return n; // return location of key
+        }
+    }
+
+    return -1; // key not found
+}
