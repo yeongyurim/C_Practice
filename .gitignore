@@ -7,6 +7,7 @@
 # Unignore all dirs
 !*/
 
+*.exe
 .vscode/
 *.DSYM
 .DS_STORE
