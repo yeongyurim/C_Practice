@@ -17,7 +17,7 @@ int main(void) {
         printf("%4d", a[i]);
     }
 
-    bubbleSort(a, SIZE) // sort the array
+    bubbleSort(a, SIZE); // sort the array
 
     puts("\nData items in ascending order");
 
@@ -34,5 +34,21 @@ void bubbleSort(int * const array, size_t size) {
     void swap(int *element1Ptr, int *element2Ptr); // prototype
 
     // loop to control passes
-    for (int pass = 0; pass < size)
+    for (int pass = 0; pass < size - 1; ++pass) {
+        // loop to control comparisions during each pass
+        for (size_t j = 0; j < size - pass; ++j) {
+            // swap adjacent elements if they're out of order
+            if (array[j] > array[j + 1]) {
+                swap(&array[j], &array[j + 1]);
+            }
+        }
+    }
+}
+
+// swap values at memory locations to which element1Ptr and
+// element2Ptr point
+void swap(int *element1Ptr, int *element2Ptr) {
+    int hold = *element1Ptr;
+    *element1Ptr = *element2Ptr;
+    *element2Ptr = hold;
 }

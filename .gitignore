@@ -7,7 +7,8 @@
 # Unignore all dirs
 !*/
 
-*.exe
+ge_source_code/
 .vscode/
+*.exe
 *.DSYM
 .DS_STORE
