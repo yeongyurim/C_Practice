@@ -13,7 +13,7 @@ int main(void) {
     int a[SIZE] = { 2, 6, 4, 8, 10, 12, 89, 45, 37 };
 
     printf("%s", "Enter 1 to sort in ascending order.\n"
-           " Enter 2 to sort in descending order: ");
+           "Enter 2 to sort in descending order: ");
     int order = 0;
     scanf("%d", &order);
 
