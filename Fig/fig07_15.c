@@ -17,5 +17,21 @@ int main(void) {
     char string4[] = "Good Bye"; // create an array containing a string
 
     copy2(string3, string4);
-    printf()
+    printf("string3 = %s\n", string3);
+}
+
+//  copy s2 to s1 using array notation
+void copy1(char * const s1, const char * const s2) {
+    // loop through strings
+    for (size_t i = 0; (s1[i] = s2[i]) != NULL; ++i) {
+        ; // do nothing in body
+    }
+}
+
+// copy s2 to s1 using pointer notation
+void copy2(char *s1, const char *s2) {
+    // loop through strings
+    for (; (*s1= *s2) != NULL; ++s1, ++s2) {
+        ; // do nothing in body
+    }
 }
