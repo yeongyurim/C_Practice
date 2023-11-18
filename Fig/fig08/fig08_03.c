@@ -44,3 +44,5 @@ int main(void) {
 
 // printing character
 // $ , #, (,) , [,], {,}, ;, : or %
+
+// isgraph is same as isprint, except that the space character is not included.
