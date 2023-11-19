@@ -27,3 +27,17 @@ void reverse(const char * const sPtr) {
         putchar(sPtr[0]); // use putchar to display character
     }
 }
+
+// char *fgets(char *s, int n, FILE *stream)
+// Reads characters from the specified stream into the array s
+// until a newline or EOF character is encountered,
+// or until n - 1 bytes are read.
+// This chapter uses the stream stdin the standard input stream
+// to read characters from the keyboard.
+// A terminating null character is appended to the array.
+// Returns the string that was read into s.
+// If a newline is encountered. it's included in the stored string.
+
+
+// int putchar(int c)
+// Prints the character stored in c and retuns ut as an integer.
