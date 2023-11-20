@@ -15,3 +15,6 @@ int main(void) {
 
     printf("The formatted output stored in array s is:\n%s\n", s);
 }
+// Equivalent to printf, but the output is stored in the array s
+// instead of printed on the screen.
+// Returns the number of characters written to s, or EOF if an error occurs.

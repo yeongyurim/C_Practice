@@ -41,3 +41,7 @@ void reverse(const char * const sPtr) {
 
 // int putchar(int c)
 // Prints the character stored in c and retuns ut as an integer.
+
+// int puts(const char *s)
+// Prints the string s followed by a newline character.
+// Returns a nonzero integer if successful, or EOF if an error occurs.

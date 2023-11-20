@@ -15,7 +15,7 @@ int main(void) {
 
     // concatenate first 6 characters of s1 to s3
     printf("strncat(s3, s1, 6) = %s\n", strncat(s3, s1, 6));
-[[[]]]
+
     // concatenate s1 to s3
     printf("strcat(s3, s1) = %s\n", strcat(s3, s1));
 }

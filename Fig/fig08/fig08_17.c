@@ -1,5 +1,9 @@
 // fig08_17.c
 // Using function strrchr
+// char *strchr(const char *s, int c)
+// Locates the last occurrence of c in string s,
+// If a c is found, strrchr returns a pointer to c in string s,
+// Otherwise, it returns NULL.
 #include <stdio.h>
 #include <string.h>
 

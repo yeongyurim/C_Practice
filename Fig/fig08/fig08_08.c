@@ -20,3 +20,6 @@ int main(void) {
     puts("\nThe line entered was:");
     puts(sentence); // display sentence
 }
+
+// int getchar(void)
+// Returns the next character from the standard input as an integer.
