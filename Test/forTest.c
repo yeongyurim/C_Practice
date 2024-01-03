@@ -12,4 +12,8 @@ int main (void){
     printf("\n");
     
     return 0;
+
+    for(;1;){
+        printf("%d", 1);
+    }
 }
