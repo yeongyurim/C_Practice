@@ -92,7 +92,7 @@ void insert(ListNodePtr *sPtr, char value) {
         while (currentPtr != NULL && value > currentPtr->data) {
             previousPtr = currentPtr; // walk to ...
             currentPtr = currentPtr->nextPtr; // ... next node
-        }}
+        }
 
         // insert new node at beginning of list
         if (previousPtr == NULL) {
@@ -132,7 +132,7 @@ char delete(ListNodePtr *sPtr, char value) {
         // delete node at currentPtr
         if (currentPtr != NULL) {
             ListNodePtr tempPtr = currentPtr;
-            previousPtr->nextPtr = currentPtr->NextPtr;
+            previousPtr->nextPtr = currentPtr->nextPtr;
             free(tempPtr);
             return value;
         }
