@@ -1,0 +1,7 @@
+.vscode/tasks.json
+main
+.vscode/c_cpp_properties.json
+main.exe
+.vscode/launch.json
+main.dSYM/Contents/Info.plist
+main.exe
