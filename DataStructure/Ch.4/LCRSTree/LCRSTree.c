@@ -54,6 +54,19 @@ void LCRS_PrintTree( LCRSNode* Node, int Depth )
 
     if (Depth > 0) // 자식 노드 여부 표시
         printf("+--");
-        
 
+    // 노드 데이터 출력
+    printf("%c\n", Node->Data);
+
+    if ( Node->LeftChild != NULL )
+        LCRS_PrintTree(Node->LeftChild, Depth+1);
+
+    if ( Node->RightSibling != NULL )
+        LCRS_PrintTree(Node->RightSibling, Depth);
+}
+
+// int형 level 만 받아 특정 레벨만 출력할 수 있는가?
+void LCRS_PrintNodesAtLevel(int Level) 
+{
+    
 }
