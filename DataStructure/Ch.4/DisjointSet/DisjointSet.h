@@ -2,7 +2,7 @@
 #define DISJOINTSET_H
 
 #include <stdio.h>
-#include <Stdlib.h>
+#include <stdlib.h>
 
 typedef struct tagDisjointSet
 {
