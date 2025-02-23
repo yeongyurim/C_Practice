@@ -20,4 +20,9 @@ typedef struct tagHeap {
 
 Heap* HEAP_Create( int InitialSize );
 void  HEAP_Destroy( Heap* H);
-void HEAP_ Insert( Heap* H, ElementType NewData );
+void  HEAP_Insert( Heap* H, ElementType NewData );
+void  HEAP_DeleteMin( Heap* H, HeapNode* Root );
+int   HEAP_GetParent( int Index );
+int   HEAP_GetLeftChild( int Index );
+void  HEAP_SwapNodes( Heap* H, int Index1, int Index2 );
+void  HEAP_PrintNodes(Heap* H );
