@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 
 int fib_iter(int n)
 {
@@ -23,7 +24,17 @@ int fib(int n)
 }
 
 int main(void) {
-    printf("%d\n",fib_iter(2));
-    printf("%d\n",fib(2));
+    clock_t startT, endT;
+
+    startT = clock();
+    printf("%d\n",fib_iter(20));
+    endT = clock();
+    printf("iteration: %f seconds\n", (double)(endT - startT) / CLOCKS_PER_SEC);
+
+    startT = clock();
+    printf("%d\n",fib(20));
+    endT = clock();
+    printf("recursion: %f seconds\n", (double)(endT - startT) / CLOCKS_PER_SEC);
+
     return 0;
 }
