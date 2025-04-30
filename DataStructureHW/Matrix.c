@@ -18,6 +18,35 @@ typedef struct SparseMatrix {
     int terms; 	// 항의 개수
 } SparseMatrix;
 
+SparseMatrix matrix_transpose2(SparseMatrix a) {
+    SparseMatrix b;
+    int bindex;		// 행렬 b에서 현재 저장 위치
+    b.rows = a.cols;    b.cols = a.rows;    b.terms = a.terms;
+    bindex = 0;
+    for (int c = 0; c < a.cols; c++) {
+        for (int i = 0; i < a.terms; i++) {
+            if (a.data[i].col == c) {
+                b.data[bindex].row = a.data[i].col;
+                b.data[bindex].col = a.data[i].row;
+                b.data[bindex].value = a.data[i].value;
+                bindex++;
+            }
+        }
+    }
+    return b;
+}
+
+void sparse_matrix_print(SparseMatrix a)
+{
+	printf("====================\n");
+	for (int i = 0; i < a.terms; i++) {
+		printf("(%d, %d, %d) \n", 
+                a.data[i].row, a.data[i].col, a.data[i].value);
+	}
+	printf("====================\n");
+}
+
+
 void matrix_print(int A[ROWS][COLS])
 {
     printf("====================\n");

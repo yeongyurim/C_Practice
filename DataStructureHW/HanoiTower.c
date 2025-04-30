@@ -12,6 +12,6 @@ void hanoi_tower(int n, char from, char tmp, char to)
 
 int main(void)
 {
-    hanoi_tower(3,'A','B','C');
+    hanoi_tower(2,'A','B','C');
     return 0;
 }
