@@ -36,6 +36,12 @@ int main()
 
 	int* pv = 0;
 	pv = (int*)malloc(sizeof(int) * 4);
+	if (pv == NULL)
+	{
+		printf("메모리공간부족으로 할당불가\n");
+		free(pn);
+		return 0;
+	}
 	*(pv + 0) = 10;
 	*(pv + 1) = 20;
 	*(pv + 2) = 30;
@@ -49,11 +55,12 @@ int main()
 		++i;
 	}
 
-	if (pn != NULL && pv != NULL)
-	{
-		free(pv);
-		free(pn);	
-	}
+	//free(NULL)은 아무 일도 하지 않으므로 조건 없이 해제
+	free(pv);
+	free(pn);
+	//해제한 메모리를 다시 쓰지 않도록 NULL로 초기화
+	pv = NULL;
+	pn = NULL;
 
 	return 0;
 }

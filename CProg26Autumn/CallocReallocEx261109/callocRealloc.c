@@ -7,9 +7,12 @@ int main()
 	int* ip = 0;
 	ip = (int*)calloc(4, sizeof(int) );
 
-	for (int i; i <= 3; ++i)
+	for (int i = 0; i <= 3; ++i)
 	{
 
 	}
+
+	free(ip);
+	ip = NULL;
 	return 0;
 }
